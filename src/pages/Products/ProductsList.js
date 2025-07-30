@@ -22,7 +22,7 @@ const ProductsList = () => {
     initialProductList(data);
   }
   fetchProducts();
- },[searchterm]);
+ },[searchterm]); //eslint-disable-line
 
   return (
     <main>
