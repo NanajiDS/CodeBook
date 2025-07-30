@@ -6,7 +6,7 @@ export const OrderSuccess = ({data}) => {
         <div className="my-5">
             <p className="bi bi-check-circle text-green-600 text-7xl mb-5"></p>
             <p>Thank you {data.user.user} for order!</p>
-            <p>Your Order ID: user id</p>          
+            <p>Your Order ID: {data.user.id}</p>          
         </div>
         <div className="my-5">
             <p>Your order is confirmed.</p>
