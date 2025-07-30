@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 export const ProductCard = ({ product }) => {
     const [inCart, setInCart] = useState();
     const { cartList, addtoCart, removeFromCart } = useCart();
-    const { id, name, overview, poster, price, rating, img_local, best_seller } = product;
+    const { id, name, overview, poster, price, rating, best_seller } = product;
     useEffect(() => {
         const isProductExist = cartList.find(item => item.id === product.id);
         if (isProductExist) {

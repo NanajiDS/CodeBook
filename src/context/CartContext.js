@@ -1,6 +1,5 @@
 import { createContext, useContext, useReducer } from "react"
 import { CartReducer } from "../reducers";
-import { type } from "@testing-library/user-event/dist/type";
 
 const cartIntialState = {
     cartList: [],
@@ -26,7 +25,7 @@ export const CartProvider = ({ children }) => {
     }
 
     function removeFromCart(product) {
-        const updatedProductsList = state.cartList.filter(item => item.id != product.id)
+        const updatedProductsList = state.cartList.filter(item => item.id !== product.id)
         const updatedTotal = state.total - product.price;
         dispatch({
             type: "REMOVE_FROM_CART",

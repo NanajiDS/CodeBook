@@ -9,9 +9,9 @@ export const CartCard = ({product}) => {
             <img className="w-32 rounded" src={product.poster} alt={product.name} />
           </Link>
           <div className="">
-            <a href="">
+            <Link to={`products/${product.id}`}>
               <p className="text-lg ml-2 dark:text-slate-200">{product.name}</p>
-            </a>            
+            </Link>            
             <button onClick={()=>removeFromCart(product) } className="text-base ml-2 text-red-400">Remove</button>
           </div>
       </div>

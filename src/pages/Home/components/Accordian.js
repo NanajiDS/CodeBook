@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Accordian = ({faq}) => {
-    const {id,answer,question} = faq;
+    const {answer,question} = faq;
     const[show,setShow] = useState(false);
   return (
     <div >

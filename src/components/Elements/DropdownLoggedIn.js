@@ -12,12 +12,12 @@ export const DropdownLoggedIn = ({ setDropDown }) => {
         async function fetchData() {
             const data = await getUser();
             
-            data.email ? setUser(data): Logout();
+            data.email ? setUser(data): HandleLogout();
         }
         fetchData();
 
     }, []);
-    function Logout() {
+    function HandleLogout() {
         setDropDown(false);
         logout();
         navigate("/");
@@ -36,7 +36,7 @@ export const DropdownLoggedIn = ({ setDropDown }) => {
                 </li>
             </ul>
             <div className="py-1">
-                <span onClick={Logout} className="cursor-pointer block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</span>
+                <span onClick={HandleLogout} className="cursor-pointer block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</span>
             </div>
         </div>
     )

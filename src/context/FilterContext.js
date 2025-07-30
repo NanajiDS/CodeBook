@@ -41,19 +41,19 @@ export const FilterProvider = ({children}) => {
     }
     function getRatingBy(products)
     {
-          if(state.rating == "4ANDABOVE")
+          if(state.rating === "4ANDABOVE")
           {
            return products.filter(product => product.rating >= 4)
           }
-          else if(state.rating == "3ANDABOVE")
+          else if(state.rating === "3ANDABOVE")
           {
            return products.filter(product => product.rating >= 3)
           }
-          else if(state.rating == "2ANDABOVE")
+          else if(state.rating === "2ANDABOVE")
           {
            return products.filter(product => product.rating >= 2)
           }
-          else if(state.rating == "1ANDABOVE")
+          else if(state.rating === "1ANDABOVE")
           {
            return products.filter(product => product.rating >= 1)
           }
@@ -61,11 +61,11 @@ export const FilterProvider = ({children}) => {
     }
     function getSortBy(products)
     {
-        if(state.sortBy == "LOWTOHIGH")
+        if(state.sortBy === "LOWTOHIGH")
         {
           return  products.sort((a,b)=> Number(a.price) - Number(b.price));
         }
-        else if(state.sortBy == "HIGHTOLOW")
+        else if(state.sortBy === "HIGHTOLOW")
         {
             return products.sort((a,b)=> Number(b.price) - Number(a.price));
         }

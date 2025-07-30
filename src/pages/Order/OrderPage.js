@@ -3,7 +3,6 @@ import {OrderFail} from "./components/OrderFail";
 import { useLocation } from "react-router-dom";
 import useTitle from '../../hooks/useTitle';
 export const OrderPage = () => {
-  const status= false;
   const {state} = useLocation();
   useTitle("Orderspage-CodeBook");
   return (

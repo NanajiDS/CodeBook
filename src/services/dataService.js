@@ -26,7 +26,7 @@ export async function getUserOrders() {
 }
 
 export async function CreateOrder(cartList, total, user) {
-    const { token, cbid } = getSession();
+    const { token } = getSession();
     const order = {
         cartList: cartList,
         amoutPaid: total,
